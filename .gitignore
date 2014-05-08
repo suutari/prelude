@@ -12,6 +12,7 @@ url
 ede-projects.el
 .DS_Store
 custom.el
+private.el
 places
 .smex-items
 savefile/
