@@ -23,6 +23,13 @@
 
 ;; Global keys =============================================
 
+;; Function keys
+(global-set-key (kbd "<f6>") 'next-error)
+(global-set-key (kbd "S-<f6>") 'previous-error)
+(global-set-key (kbd "<f7>") 'recompile)
+(global-set-key (kbd "C-x <f7>") 'compile)
+(global-set-key (kbd "<f9>") 'speedbar)
+
 ;; Revert to default C-a behavior
 (global-set-key
  [remap move-beginning-of-line] 'move-beginning-of-line)
