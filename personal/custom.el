@@ -62,6 +62,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(elpy-rpc-backend "jedi")
+ '(python-check-command "flake8")
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
  '(server-temp-file-regexp "^/tmp/Re\\|/draft$\\|/COMMIT_EDITMSG$\\|/MERGE_MSG$\\|/git-rebase-todo$")
