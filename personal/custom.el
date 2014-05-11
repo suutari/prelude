@@ -18,6 +18,9 @@
 ;; helm-git-grep
 (prelude-require-packages '(helm-git-grep))
 
+;; multi-term
+(prelude-require-packages '(multi-term))
+
 ;; jabber
 (prelude-require-packages '(jabber))
 
@@ -28,6 +31,7 @@
 (global-set-key (kbd "S-<f6>") 'previous-error)
 (global-set-key (kbd "<f7>") 'recompile)
 (global-set-key (kbd "C-x <f7>") 'compile)
+(global-set-key (kbd "<f8>") 'multi-term)
 (global-set-key (kbd "<f9>") 'speedbar)
 
 ;; Revert to default C-a behavior
