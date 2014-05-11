@@ -63,6 +63,8 @@
  ;; If there is more than one, they won't work right.
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git$")
  '(elpy-rpc-backend "jedi")
+ '(projectile-remember-window-configs t)
+ '(projectile-switch-project-action (quote projectile-dired))
  '(python-check-command "flake8")
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
