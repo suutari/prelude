@@ -15,6 +15,11 @@
 (elpy-use-ipython)
 (elpy-clean-modeline)
 
+;; perspective
+(prelude-require-packages '(persp-projectile perspective))
+(persp-mode t)
+(require 'persp-projectile)
+
 ;; helm-git-grep
 (prelude-require-packages '(helm-git-grep))
 
