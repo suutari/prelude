@@ -8,6 +8,10 @@
 
 ;; Packages ================================================
 
+;; Theme
+(prelude-require-packages '(cyberpunk-theme))
+(load-theme 'cyberpunk t)
+
 ;; elpy
 (prelude-require-packages '(elpy))
 (require 'elpy)
