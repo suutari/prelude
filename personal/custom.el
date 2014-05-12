@@ -6,7 +6,7 @@
 
 (require 'prelude-packages)
 
-;; Packages ================================================
+;; Packages and package configuration ======================
 
 ;; Theme
 (prelude-require-packages '(cyberpunk-theme))
@@ -32,6 +32,12 @@
 
 ;; jabber
 (prelude-require-packages '(jabber))
+
+;; desktop -- Enable desktop save
+(require 'desktop)
+(setq desktop-path (list prelude-savefile-dir))
+(setq desktop-dirname prelude-savefile-dir)
+(desktop-save-mode +1)
 
 ;; Global keys =============================================
 
