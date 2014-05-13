@@ -20,9 +20,12 @@
 (elpy-clean-modeline)
 
 ;; perspective
-(prelude-require-packages '(persp-projectile perspective))
-(persp-mode t)
-(require 'persp-projectile)
+(prelude-require-packages '(persp-mode))
+(eval-after-load "persp-mode-autoloads"
+  '(progn
+     (setq wg-morph-on nil) ; switch off window restore animation
+     (add-hook 'after-init-hook #'(lambda () (persp-mode t)))))
+(require 'persp-mode-projectile)
 
 ;; helm-git-grep
 (prelude-require-packages '(helm-git-grep))

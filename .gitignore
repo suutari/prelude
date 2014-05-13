@@ -17,6 +17,7 @@ private.el
 places
 .smex-items
 savefile/
+/persp-confs/
 /tramp
 /prelude-modules.el
 projectile-bookmarks.eld
