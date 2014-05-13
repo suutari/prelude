@@ -1,13 +1,13 @@
-;;; persp-projectile.el --- Perspective integration with Projectile
+;;; persp-mode-projectile.el --- Persp-mode integration with Projectile
 
 ;; Copyright (C) 2014 Daniel Wu
 
 ;; Author: Daniel Wu
 ;; Created: 2014-04-14
 ;; Keywords: project, convenience
-;; Version: 20140416.1040
+;; Version: 20140513.1
 ;; X-Original-Version: 0.1.0
-;; Package-Requires: ((perspective "1.9") (projectile "0.10.0") (cl-lib "0.3"))
+;; Package-Requires: ((persp-mode "20140419.502") (projectile "0.10.0") (cl-lib "0.3"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -30,7 +30,7 @@
 
 ;;; Commentary:
 ;;
-;; This library bridges perspective mode to the awesome library
+;; This library bridges persp-mode to the awesome library
 ;; Projectile.  The idea is to create a separate perspective when
 ;; switching project.  A perspective is an independant workspace for
 ;; Emacs, similar to multiple desktops in Gnome and MacOS.  I often
@@ -40,12 +40,12 @@
 ;; when switching buffer.
 
 ;; To use this library, put this file in your Emacs load path, and
-;; call (require 'persp-projectile)
+;; call (require 'persp-mode-projectile)
 
-;; See perspective.el on github: https://github.com/nex3/perspective-el
+;; See persp-mode.el on github: https://github.com/Bad-ptr/persp-mode.el
 
 ;;; Code:
-(require 'perspective)
+(require 'persp-mode)
 (require 'projectile)
 
 (defmacro projectile-persp-bridge (func-name)
@@ -73,12 +73,12 @@ perspective of the project that we're switching to"
           (projectile-completing-read "Switch to project: "
                                       (projectile-relevant-known-projects)))
          (name (file-name-nondirectory (directory-file-name project-to-switch)))
-         (persp (gethash name perspectives-hash)))
+         (persp (gethash name *persp-hash*)))
     (if persp
         (persp-switch name)
       (projectile-switch-project-by-name project-to-switch))))
 
 (define-key projectile-mode-map [remap projectile-switch-project] 'projectile-persp-switch-project)
 
-(provide 'persp-projectile)
-;;; persp-projectile.el ends here
+(provide 'persp-mode-projectile)
+;;; persp-mode-projectile.el ends here
