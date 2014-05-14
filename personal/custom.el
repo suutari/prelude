@@ -81,8 +81,10 @@
  ;; If there is more than one, they won't work right.
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git$")
  '(elpy-rpc-backend "jedi")
+ '(projectile-project-root-files-top-down-recurring (quote (".git" ".svn" "CVS")))
  '(projectile-remember-window-configs t)
  '(projectile-switch-project-action (quote projectile-dired))
+ '(projectile-use-git-grep t)
  '(python-check-command "flake8")
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
