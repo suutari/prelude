@@ -89,6 +89,7 @@
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
  '(server-temp-file-regexp "^/tmp/Re\\|/draft$\\|/COMMIT_EDITMSG$\\|/MERGE_MSG$\\|/git-rebase-todo$")
+ '(sp-autoinsert-pair nil)
  '(winner-mode t nil (winner)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
