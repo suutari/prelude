@@ -81,14 +81,15 @@
  ;; If there is more than one, they won't work right.
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git$")
  '(elpy-rpc-backend "jedi")
+ '(projectile-project-root-files-top-down-recurring (quote (".git" ".svn" "CVS")))
  '(projectile-remember-window-configs t)
  '(projectile-switch-project-action (quote projectile-dired))
+ '(projectile-use-git-grep t)
  '(python-check-command "flake8")
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
  '(server-temp-file-regexp "^/tmp/Re\\|/draft$\\|/COMMIT_EDITMSG$\\|/MERGE_MSG$\\|/git-rebase-todo$")
- '(winner-mode t nil (winner))
- )
+ '(winner-mode t nil (winner)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
