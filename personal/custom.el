@@ -109,6 +109,12 @@
 (eval-after-load 'helm
   '(define-key helm-map (kbd "C-c g") 'helm-git-grep-from-helm))
 
+
+;; Fonts and stuff =========================================
+
+(set-face-attribute 'default nil :height 90)
+
+
 ;; Emacs variables and faces  ==============================
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
