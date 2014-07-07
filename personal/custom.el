@@ -42,6 +42,13 @@
 (setq desktop-dirname prelude-savefile-dir)
 (desktop-save-mode +1)
 
+;; Tramp - Make sudo to root use ssh as proxy to allow editing files
+;; on remote as root with sudo
+(set-default
+ 'tramp-default-proxies-alist
+ (quote ((".*" "\\`root\\'" "/ssh:%h:"))))
+
+
 ;; Global keys =============================================
 
 ;; Function keys
