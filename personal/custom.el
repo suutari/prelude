@@ -123,6 +123,7 @@
  ;; If there is more than one, they won't work right.
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git$")
  '(elpy-rpc-backend "jedi")
+ '(persp-set-last-persp-for-new-frames nil)
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
  '(projectile-project-root-files-bottom-up (quote (".projectile" ".hg" ".fslckout" ".bzr" "_darcs")))
