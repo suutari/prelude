@@ -49,6 +49,32 @@
  (quote ((".*" "\\`root\\'" "/ssh:%h:"))))
 
 
+;; Custom functions ========================================
+
+;; python modes
+(defun ai-python-mode ()
+  (interactive)
+  (setq indent-tabs-mode t)
+  (setq python-indent 4)
+  (setq python-continuation-offset 4)
+  (setq tab-width 4))
+(defun normal-python-mode ()
+  (interactive)
+  (setq indent-tabs-mode nil)
+  (setq python-indent 4)
+  (setq python-continuation-offset 4)
+  (setq tab-width 8))
+(defun dirty-ai-python-mode ()
+  (interactive)
+  (ai-python-mode)
+  (flycheck-mode 0)
+  (flymake-mode 0))
+(defun non-dirty-mode ()
+  (interactive)
+  (flycheck-mode t)
+  (flymake-mode t))
+
+
 ;; Global keys =============================================
 
 ;; Function keys
@@ -62,6 +88,9 @@
 ;; Revert to default C-a behavior
 (global-set-key
  [remap move-beginning-of-line] 'move-beginning-of-line)
+
+;; Binds for my custom functions
+(global-set-key (kbd "C-c C-a") 'dirty-ai-python-mode)
 
 ;; ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
