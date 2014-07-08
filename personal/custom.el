@@ -33,6 +33,9 @@
 ;; multi-term
 (prelude-require-packages '(multi-term))
 
+;; jinja2-mode
+(prelude-require-packages '(jinja2-mode))
+
 ;; jabber
 (prelude-require-packages '(jabber))
 
