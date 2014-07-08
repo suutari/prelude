@@ -138,6 +138,10 @@
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
  '(server-temp-file-regexp "^/tmp/Re\\|/draft$\\|/COMMIT_EDITMSG$\\|/MERGE_MSG$\\|/git-rebase-todo$")
+ '(sp-autodelete-closing-pair nil)
+ '(sp-autodelete-opening-pair nil)
+ '(sp-autodelete-pair nil)
+ '(sp-autoescape-string-quote nil)
  '(sp-autoinsert-pair nil)
  '(winner-mode t nil (winner)))
 (custom-set-faces
