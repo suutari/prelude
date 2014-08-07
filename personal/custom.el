@@ -17,7 +17,6 @@
 (require 'elpy)
 (elpy-enable)
 (elpy-use-ipython)
-(elpy-clean-modeline)
 
 ;; perspective
 (prelude-require-packages '(persp-mode))
