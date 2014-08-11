@@ -76,6 +76,25 @@
   (flycheck-mode t)
   (flymake-mode t))
 
+;; Navigating in Python files
+(defun elpy-nav-forward-definition ()
+  "Move forward to the next definition (class or function)."
+  (interactive)
+  (if (save-excursion
+        (forward-char 1)
+        (re-search-forward "^ *\\(def\\|class\\) " nil t))
+      (goto-char (match-beginning 1))
+    (goto-char (point-max))))
+
+(defun elpy-nav-backward-definition ()
+  "Move backward to the previous definition (class or function)."
+  (interactive)
+  (if (save-excursion
+        (forward-char -1)
+        (re-search-backward "^ *\\(def\\|class\\) " nil t))
+      (goto-char (match-beginning 1))
+    (goto-char (point-min))))
+
 
 ;; Global keys =============================================
 
@@ -93,6 +112,9 @@
 
 ;; Binds for my custom functions
 (global-set-key (kbd "C-c C-a") 'dirty-ai-python-mode)
+(global-set-key (kbd "M-n") 'elpy-nav-forward-definition)
+(global-set-key (kbd "M-p") 'elpy-nav-backward-definition)
+
 
 ;; ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
