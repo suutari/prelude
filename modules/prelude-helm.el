@@ -1,6 +1,6 @@
 ;;; prelude-helm.el --- Helm setup
 ;;
-;; Copyright © 2011-2013 Bozhidar Batsov
+;; Copyright © 2011-2014 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
@@ -11,7 +11,8 @@
 
 ;;; Commentary:
 
-;; Some config for Helm.
+;; Some configuration for Helm following this guide:
+;; http://tuhdo.github.io/helm-intro.html
 
 ;;; License:
 
@@ -34,28 +35,39 @@
 
 (prelude-require-packages '(helm helm-projectile))
 
-(require 'helm-misc)
+(require 'helm)
+(require 'helm-grep)
+(require 'helm-files)
 (require 'helm-projectile)
 
-(defun helm-prelude ()
-  "Preconfigured `helm'."
-  (interactive)
-  (condition-case nil
-      (if (projectile-project-root)
-          (helm-projectile)
-        ;; otherwise fallback to `helm-mini'
-        (helm-mini))
-    ;; fall back to helm mini if an error occurs (usually in `projectile-project-root')
-    (error (helm-mini))))
+;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+;; Note: this must be placed before require `helm-config'
+(setq helm-command-prefix-key "C-c h")
 
-(eval-after-load 'prelude-mode
-  '(progn
-     (define-key prelude-mode-map (kbd "C-c h") 'helm-prelude)
-     (easy-menu-add-item nil '("Tools" "Prelude")
-                         '("Navigation"
-                           ["Helm" helm-prelude]))))
+(require 'helm-config)
 
-(push "Press <C-c h> to navigate a project in Helm." prelude-tips)
+(when (executable-find "curl")
+  (setq helm-google-suggest-use-curl-p t))
+
+;; See https://github.com/bbatsov/prelude/pull/670 for a detailed
+;; discussion of these options.
+(setq helm-quick-update                     t
+      helm-split-window-in-side-p           t
+      helm-buffers-fuzzy-matching           t
+      helm-move-to-line-cycle-in-source     t
+      helm-ff-search-library-in-sexp        t
+      helm-ff-file-name-history-use-recentf t)
+
+(define-key helm-command-map (kbd "o")     'helm-occur)
+(define-key helm-command-map (kbd "g")     'helm-do-grep)
+(define-key helm-command-map (kbd "C-c w") 'helm-wikipedia-suggest)
+(define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
+
+(define-key helm-grep-mode-map (kbd "RET") 'helm-grep-mode-jump-other-window)
+(define-key helm-grep-mode-map (kbd "n")   'helm-grep-mode-jump-other-window-forward)
+(define-key helm-grep-mode-map (kbd "p")   'helm-grep-mode-jump-other-window-backward)
+
+(push "Press <C-c p h> to navigate a project in Helm." prelude-tips)
 
 (provide 'prelude-helm)
 
