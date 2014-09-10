@@ -75,6 +75,10 @@
   (interactive)
   (flycheck-mode t)
   (flymake-mode t))
+(defun toggle-dirty-mode ()
+  (interactive)
+  (flycheck-mode 'toggle)
+  (flymake-mode 'toggle))
 
 ;; Navigating in Python files
 (defun elpy-nav-forward-definition ()
@@ -112,6 +116,7 @@
 
 ;; Binds for my custom functions
 (global-set-key (kbd "C-c C-a") 'dirty-ai-python-mode)
+(global-set-key (kbd "C-c C-b") 'toggle-dirty-mode)
 (global-set-key (kbd "M-n") 'elpy-nav-forward-definition)
 (global-set-key (kbd "M-p") 'elpy-nav-backward-definition)
 
