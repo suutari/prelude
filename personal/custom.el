@@ -82,7 +82,7 @@
   (interactive)
   (if (save-excursion
         (forward-char 1)
-        (re-search-forward "^ *\\(def\\|class\\) " nil t))
+        (re-search-forward "^[ \t]*\\(def\\|class\\) " nil t))
       (goto-char (match-beginning 1))
     (goto-char (point-max))))
 
@@ -91,7 +91,7 @@
   (interactive)
   (if (save-excursion
         (forward-char -1)
-        (re-search-backward "^ *\\(def\\|class\\) " nil t))
+        (re-search-backward "^[ \t]*\\(def\\|class\\) " nil t))
       (goto-char (match-beginning 1))
     (goto-char (point-min))))
 
