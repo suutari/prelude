@@ -26,6 +26,10 @@
      (add-hook 'after-init-hook #'(lambda () (persp-mode t)))))
 (require 'persp-mode-projectile)
 
+;; smart-mode-line
+(prelude-require-packages '(smart-mode-line))
+(sml/setup)
+
 ;; helm-git-grep
 (prelude-require-packages '(helm-git-grep))
 
