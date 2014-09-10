@@ -13,6 +13,7 @@
  '(custom-safe-themes (quote ("6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" default)))
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git$")
  '(elpy-rpc-backend "jedi")
+ '(persp-auto-resume-time 0.5)
  '(persp-set-last-persp-for-new-frames nil)
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
