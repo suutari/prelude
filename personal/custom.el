@@ -99,6 +99,7 @@
 (global-set-key (kbd "C-x <f7>") 'compile)
 (global-set-key (kbd "<f8>") 'multi-term)
 (global-set-key (kbd "<f9>") 'speedbar)
+(global-set-key (kbd "§") 'god-mode-all)
 
 ;; Revert to default C-a behavior
 (global-set-key
