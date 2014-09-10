@@ -69,6 +69,10 @@
   (interactive)
   (flycheck-mode t)
   (flymake-mode t))
+(defun toggle-dirty-mode ()
+  (interactive)
+  (flycheck-mode 'toggle)
+  (flymake-mode 'toggle))
 
 ;; Navigating in Python files
 (defun elpy-nav-forward-definition ()
@@ -76,7 +80,7 @@
   (interactive)
   (if (save-excursion
         (forward-char 1)
-        (re-search-forward "^ *\\(def\\|class\\) " nil t))
+        (re-search-forward "^[ \t]*\\(def\\|class\\) " nil t))
       (goto-char (match-beginning 1))
     (goto-char (point-max))))
 
@@ -85,7 +89,7 @@
   (interactive)
   (if (save-excursion
         (forward-char -1)
-        (re-search-backward "^ *\\(def\\|class\\) " nil t))
+        (re-search-backward "^[ \t]*\\(def\\|class\\) " nil t))
       (goto-char (match-beginning 1))
     (goto-char (point-min))))
 
@@ -107,6 +111,7 @@
 
 ;; Binds for my custom functions
 (global-set-key (kbd "C-c C-a") 'dirty-ai-python-mode)
+(global-set-key (kbd "C-c C-b") 'toggle-dirty-mode)
 (global-set-key (kbd "M-n") 'elpy-nav-forward-definition)
 (global-set-key (kbd "M-p") 'elpy-nav-backward-definition)
 
