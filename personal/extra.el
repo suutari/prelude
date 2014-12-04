@@ -42,6 +42,9 @@
 ;; jabber
 (prelude-require-packages '(jabber))
 
+;; ox-reveal (from vendor directory)
+(require 'ox-reveal)
+
 ;; Tramp - Make sudo to root use ssh as proxy to allow editing files
 ;; on remote as root with sudo
 (set-default
