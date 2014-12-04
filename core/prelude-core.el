@@ -59,12 +59,16 @@ With a prefix ARG always prompt for command to use."
   (with-current-buffer buffer-or-name
     major-mode))
 
+(defvar prelude-term-buffer-name "ansi"
+  "The default `ansi-term' name used by `prelude-visit-term-buffer'.
+This variable can be set via .dir-locals.el to provide multi-term support.")
+
 (defun prelude-visit-term-buffer ()
   "Create or visit a terminal buffer."
   (interactive)
   (prelude-start-or-switch-to (lambda ()
-                                (ansi-term (getenv "SHELL")))
-                              "*ansi-term*"))
+                                (ansi-term (getenv "SHELL") (concat prelude-term-buffer-name "-term")))
+                              (format "*%s-term*" prelude-term-buffer-name)))
 
 (defun prelude-search (query-url prompt)
   "Open the search url constructed with the QUERY-URL.
@@ -483,20 +487,18 @@ With a prefix argument ARG, find the `user-init-file' instead."
      (interactive "P")
      (sp-wrap-with-pair ,s)))
 
-(defun prelude-ido-goto-symbol (&optional symbol-list)
+(defun prelude-goto-symbol (&optional symbol-list)
   "Refresh imenu and jump to a place in the buffer using Ido."
   (interactive)
-  (unless (featurep 'imenu)
-    (require 'imenu nil t))
   (cond
    ((not symbol-list)
     (let (name-and-pos symbol-names position)
       (while (progn
                (imenu--cleanup)
                (setq imenu--index-alist nil)
-               (prelude-ido-goto-symbol (imenu--make-index-alist))
+               (prelude-goto-symbol (imenu--make-index-alist))
                (setq selected-symbol
-                     (ido-completing-read "Symbol? " (reverse symbol-names)))
+                     (completing-read "Symbol? " (reverse symbol-names)))
                (string= (car imenu--rescan-item) selected-symbol)))
       (unless (and (boundp 'mark-active) mark-active)
         (push-mark nil t nil))
@@ -512,7 +514,7 @@ With a prefix argument ARG, find the `user-init-file' instead."
       (let (name position)
         (cond
          ((and (listp symbol) (imenu--subalist-p symbol))
-          (prelude-ido-goto-symbol symbol))
+          (prelude-goto-symbol symbol))
          ((listp symbol)
           (setq name (car symbol))
           (setq position (cdr symbol)))
