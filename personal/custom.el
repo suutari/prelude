@@ -15,6 +15,7 @@
  '(elpy-rpc-backend "jedi")
  '(elpy-rpc-timeout 5)
  '(fill-column 72)
+ '(org-agenda-files (quote ("~/Documents/org")))
  '(persp-auto-resume-time 0.5)
  '(persp-set-last-persp-for-new-frames nil)
  '(prelude-clean-whitespace-on-save nil)
