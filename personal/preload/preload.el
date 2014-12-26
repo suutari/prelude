@@ -4,3 +4,6 @@
 
 ;; Disable flyspell
 (setq prelude-flyspell nil)
+
+;; Disable guru-mode
+(setq prelude-guru nil)
