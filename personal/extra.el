@@ -18,14 +18,6 @@
 (elpy-enable)
 (elpy-use-ipython)
 
-;; perspective
-(prelude-require-packages '(persp-mode))
-(eval-after-load "persp-mode-autoloads"
-  '(progn
-     (setq wg-morph-on nil) ; switch off window restore animation
-     (add-hook 'after-init-hook #'(lambda () (persp-mode t)))))
-(require 'persp-mode-projectile)
-
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))
 (sml/setup)
