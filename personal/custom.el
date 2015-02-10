@@ -15,8 +15,6 @@
  '(elpy-rpc-backend "jedi")
  '(elpy-rpc-timeout 5)
  '(fill-column 72)
- '(persp-auto-resume-time 0.5)
- '(persp-set-last-persp-for-new-frames nil)
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
  '(projectile-project-root-files-bottom-up (quote (".projectile" ".hg" ".fslckout" ".bzr" "_darcs")))
