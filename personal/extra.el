@@ -12,6 +12,10 @@
 (prelude-require-packages '(cyberpunk-theme))
 (load-theme 'cyberpunk t)
 
+;; workgroups2
+(prelude-require-packages '(workgroups2))
+(workgroups-mode 1)
+
 ;; elpy
 (prelude-require-packages '(elpy))
 (require 'elpy)
@@ -24,6 +28,9 @@
 
 ;; helm-git-grep
 (prelude-require-packages '(helm-git-grep))
+
+;; helm-swoop
+(prelude-require-packages '(helm-swoop))
 
 ;; multi-term
 (prelude-require-packages '(multi-term))
