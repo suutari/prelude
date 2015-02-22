@@ -12,6 +12,10 @@
 (prelude-require-packages '(cyberpunk-theme))
 (load-theme 'cyberpunk t)
 
+;; workgroups2
+(prelude-require-packages '(workgroups2))
+(workgroups-mode 1)
+
 ;; elpy
 (prelude-require-packages '(elpy))
 (require 'elpy)

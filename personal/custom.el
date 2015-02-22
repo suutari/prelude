@@ -34,6 +34,7 @@
  '(sp-autodelete-pair nil)
  '(sp-autoescape-string-quote nil)
  '(sp-autoinsert-pair nil)
+ '(wg-session-file "~/.emacs.d/savefile/workgroups")
  '(winner-mode t nil (winner)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
