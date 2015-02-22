@@ -25,6 +25,9 @@
 ;; helm-git-grep
 (prelude-require-packages '(helm-git-grep))
 
+;; helm-swoop
+(prelude-require-packages '(helm-swoop))
+
 ;; multi-term
 (prelude-require-packages '(multi-term))
 
