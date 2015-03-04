@@ -20,6 +20,9 @@
 (global-set-key (kbd "M-p") 'elpy-nav-backward-definition)
 
 
+;; pyvenv
+(global-set-key (kbd "C-c w") 'pyvenv-workon)
+
 ;; ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
