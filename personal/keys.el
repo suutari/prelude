@@ -8,6 +8,7 @@
 (global-set-key (kbd "<f8>") 'multi-term)
 (global-set-key (kbd "<f9>") 'speedbar)
 (global-set-key (kbd "§") 'god-mode-all)
+(global-set-key (kbd "C-§") 'god-mode-all)
 
 ;; Revert to default C-a behavior
 (global-set-key
