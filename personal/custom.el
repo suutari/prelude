@@ -18,6 +18,8 @@
  '(fill-column 72)
  '(helm-M-x-fuzzy-match t)
  '(org-agenda-files (quote ("~/Documents/org")))
+ '(org-default-notes-file "notes.org")
+ '(org-directory "~/Documents/org")
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
  '(projectile-project-root-files-bottom-up (quote (".projectile" ".hg" ".fslckout" ".bzr" "_darcs")))
