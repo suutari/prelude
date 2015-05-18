@@ -1,12 +1,14 @@
 ;; Global keys =============================================
 
 ;; Function keys
+(global-set-key (kbd "<f5>") 'previous-error)  ; remember also: M-g M-p
 (global-set-key (kbd "<f6>") 'next-error) ; remember also: M-g M-n
 (global-set-key (kbd "S-<f6>") 'previous-error)  ; remember also: M-g M-p
 (global-set-key (kbd "<f7>") 'recompile)
 (global-set-key (kbd "C-x <f7>") 'compile)
 (global-set-key (kbd "<f8>") 'multi-term)
 (global-set-key (kbd "<f9>") 'speedbar)
+(global-set-key (kbd "<f10>") 'tmm-menubar)  ; also in X11
 (global-set-key (kbd "§") 'god-mode-all)
 (global-set-key (kbd "C-§") 'god-mode-all)
 
