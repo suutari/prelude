@@ -7,3 +7,6 @@
 
 ;; Disable guru-mode
 (setq prelude-guru nil)
+
+;; Set Prelude theme
+(setq prelude-theme 'cyberpunk)
