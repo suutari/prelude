@@ -17,10 +17,10 @@
 (workgroups-mode 1)
 
 ;; elpy
-(prelude-require-packages '(elpy))
-(require 'elpy)
-(elpy-enable)
-(elpy-use-ipython)
+;(prelude-require-packages '(elpy))
+;(require 'elpy)
+;(elpy-enable)
+;(elpy-use-ipython)
 
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))

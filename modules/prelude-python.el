@@ -33,6 +33,12 @@
 
 ;;; Code:
 
+(prelude-require-package 'anaconda-mode)
+
+(when (boundp 'company-backends)
+  (prelude-require-package 'company-anaconda)
+  (add-to-list 'company-backends 'company-anaconda))
+
 (require 'electric)
 (require 'prelude-programming)
 
@@ -81,6 +87,8 @@
 (defun prelude-python-mode-defaults ()
   "Defaults for Python programming."
   (subword-mode +1)
+  (anaconda-mode 1)
+  (eldoc-mode 1)
   (which-function-mode -1)
   (setq-local electric-layout-rules
               '((?: . (lambda ()
@@ -98,6 +106,7 @@
 
 (add-hook 'python-mode-hook (lambda ()
                               (run-hooks 'prelude-python-mode-hook)))
+
 (provide 'prelude-python)
 
 ;;; prelude-python.el ends here
