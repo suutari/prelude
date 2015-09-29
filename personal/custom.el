@@ -20,7 +20,7 @@
  '(org-agenda-files (quote ("~/Documents/org")))
  '(org-default-notes-file "notes.org")
  '(org-directory "~/Documents/org")
- '(org-todo-keyword-faces (quote (("TODO" . org-warning) ("STARTED" . "yellow"))))
+ '(org-todo-keyword-faces (quote (("TODO" . "#f44") ("STARTED" . "#ee8"))))
  '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
