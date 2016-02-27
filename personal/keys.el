@@ -12,6 +12,9 @@
 (global-set-key (kbd "§") 'god-mode-all)
 (global-set-key (kbd "C-§") 'god-mode-all)
 
+;; Org-capture
+(global-set-key (kbd "C-c c") 'org-capture)
+
 ;; Revert to default C-a behavior
 (global-set-key
  [remap move-beginning-of-line] 'move-beginning-of-line)
