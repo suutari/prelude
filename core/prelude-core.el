@@ -1,6 +1,6 @@
 ;;; prelude-core.el --- Emacs Prelude: Core Prelude functions.
 ;;
-;; Copyright © 2011-2015 Bozhidar Batsov
+;; Copyright © 2011-2016 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
@@ -67,7 +67,7 @@ This variable can be set via .dir-locals.el to provide multi-term support.")
   "Create or visit a terminal buffer."
   (interactive)
   (prelude-start-or-switch-to (lambda ()
-                                (ansi-term (getenv "SHELL") (concat prelude-term-buffer-name "-term")))
+                                (ansi-term prelude-shell (concat prelude-term-buffer-name "-term")))
                               (format "*%s-term*" prelude-term-buffer-name)))
 
 (defun prelude-search (query-url prompt)
@@ -248,7 +248,7 @@ there's a region, all lines that region covers will be duplicated."
       (if (vc-backend filename)
           (vc-delete-file filename)
         (when (y-or-n-p (format "Are you sure you want to delete %s? " filename))
-          (delete-file filename)
+          (delete-file filename delete-by-moving-to-trash)
           (message "Deleted file %s" filename)
           (kill-buffer))))))
 
@@ -285,6 +285,21 @@ there's a region, all lines that region covers will be duplicated."
   (interactive)
   (byte-recompile-directory prelude-dir 0))
 
+(defun prelude-file-owner-uid (filename)
+  "Return the UID of the FILENAME as an integer.
+
+See `file-attributes' for more info."
+  (nth 2 (file-attributes filename 'integer)))
+
+(defun prelude-file-owned-by-user-p (filename)
+  "Return t if file FILENAME is owned by the currently logged in user."
+  (equal (prelude-file-owner-uid filename)
+         (user-uid)))
+
+(defun prelude-find-alternate-file-as-root (filename)
+  "Wraps `find-alternate-file' with opening a file as root."
+  (find-alternate-file (concat "/sudo:root@localhost:" filename)))
+
 (require 'ido)
 (defun prelude-sudo-edit (&optional arg)
   "Edit currently visited file as root.
@@ -296,15 +311,17 @@ buffer is not visiting a file."
   (if (or arg (not buffer-file-name))
       (find-file (concat "/sudo:root@localhost:"
                          (ido-read-file-name "Find file(as root): ")))
-    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+    (prelude-find-alternate-file-as-root buffer-file-name)))
 
-(defadvice ido-find-file (after find-file-sudo activate)
+(defun prelude-reopen-as-root ()
   "Find file as root if necessary."
   (unless (or (tramp-tramp-file-p buffer-file-name)
               (equal major-mode 'dired-mode)
               (not (file-exists-p (file-name-directory buffer-file-name)))
-              (file-writable-p buffer-file-name))
-    (find-alternate-file (concat "/sudo:root@localhost:" buffer-file-name))))
+              (file-writable-p buffer-file-name)
+              (prelude-file-owned-by-user-p buffer-file-name))
+    (prelude-find-alternate-file-as-root buffer-file-name)))
+(add-hook 'find-file-hook 'prelude-reopen-as-root)
 
 (defun prelude-start-or-switch-to (function buffer-name)
   "Invoke FUNCTION if there is no buffer with BUFFER-NAME.
@@ -405,7 +422,7 @@ Doesn't mess with special buffers."
 (defun prelude-tip-of-the-day ()
   "Display a random entry from `prelude-tips'."
   (interactive)
-  (unless (window-minibuffer-p)
+  (when (and prelude-tips (not (window-minibuffer-p)))
     ;; pick a new random seed
     (random t)
     (message
@@ -481,49 +498,6 @@ With a prefix argument ARG, find the `user-init-file' instead."
   `(lambda (&optional arg)
      (interactive "P")
      (sp-wrap-with-pair ,s)))
-
-;; needed for prelude-goto-symbol
-(require 'imenu)
-
-(defun prelude-goto-symbol (&optional symbol-list)
-  "Refresh imenu and jump to a place in the buffer using Ido."
-  (interactive)
-  (cond
-   ((not symbol-list)
-    (let (name-and-pos symbol-names position)
-      (while (progn
-               (imenu--cleanup)
-               (setq imenu--index-alist nil)
-               (prelude-goto-symbol (imenu--make-index-alist))
-               (setq selected-symbol
-                     (completing-read "Symbol? " (reverse symbol-names)))
-               (string= (car imenu--rescan-item) selected-symbol)))
-      (unless (and (boundp 'mark-active) mark-active)
-        (push-mark nil t nil))
-      (setq position (cdr (assoc selected-symbol name-and-pos)))
-      (cond
-       ((overlayp position)
-        (goto-char (overlay-start position)))
-       (t
-        (goto-char position)))
-      (recenter)))
-   ((listp symbol-list)
-    (dolist (symbol symbol-list)
-      (let (name position)
-        (cond
-         ((and (listp symbol) (imenu--subalist-p symbol))
-          (prelude-goto-symbol symbol))
-         ((listp symbol)
-          (setq name (car symbol))
-          (setq position (cdr symbol)))
-         ((stringp symbol)
-          (setq name symbol)
-          (setq position
-                (get-text-property 1 'org-imenu-marker symbol))))
-        (unless (or (null position) (null name)
-                    (string= (car imenu--rescan-item) name))
-          (add-to-list 'symbol-names (substring-no-properties name))
-          (add-to-list 'name-and-pos (cons (substring-no-properties name) position))))))))
 
 (provide 'prelude-core)
 ;;; prelude-core.el ends here
