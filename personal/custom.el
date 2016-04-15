@@ -35,7 +35,8 @@
  '(python-check-command "flake8")
  '(python-fill-docstring-style (quote django))
  '(server-mode t)
- '(server-temp-file-regexp "^/tmp/Re\\|/draft$\\|/COMMIT_EDITMSG$\\|/MERGE_MSG$\\|/git-rebase-todo$")
+ '(server-temp-file-regexp
+   "^/tmp/Re\\|/draft$\\|/COMMIT_EDITMSG$\\|/MERGE_MSG$\\|/git-rebase-todo$")
  '(sml/theme (quote respectful))
  '(sp-autodelete-closing-pair nil)
  '(sp-autodelete-opening-pair nil)
