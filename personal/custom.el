@@ -17,6 +17,7 @@
  '(dired-omit-files "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git$")
  '(elpy-rpc-backend "jedi")
  '(elpy-rpc-timeout 5)
+ '(elpy-test-runner (quote elpy-test-pytest-runner))
  '(fill-column 72)
  '(helm-M-x-fuzzy-match t)
  '(org-agenda-files (quote ("~/Documents/org")))
