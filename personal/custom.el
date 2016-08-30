@@ -25,6 +25,7 @@
  '(org-directory "~/Documents/org")
  '(org-todo-keyword-faces (quote (("TODO" . "#f44") ("STARTED" . "#ee8"))))
  '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
+ '(prelude-auto-save nil)
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
  '(projectile-project-root-files-bottom-up (quote (".projectile" ".hg" ".fslckout" ".bzr" "_darcs")))
