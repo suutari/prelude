@@ -23,6 +23,7 @@
  '(elpy-test-runner (quote elpy-test-pytest-runner))
  '(fill-column 72)
  '(helm-M-x-fuzzy-match t)
+ '(helm-git-grep-at-point-deactivate-mark t)
  '(org-agenda-files (quote ("~/Documents/org")))
  '(org-default-notes-file "notes.org")
  '(org-directory "~/Documents/org")
