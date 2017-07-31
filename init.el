@@ -1,6 +1,6 @@
 ;;; init.el --- Prelude's configuration entry point.
 ;;
-;; Copyright (c) 2011-2016 Bozhidar Batsov
+;; Copyright (c) 2011-2017 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://batsov.com/prelude
@@ -32,14 +32,21 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;(package-initialize)
+
 (defvar current-user
-      (getenv
-       (if (equal system-type 'windows-nt) "USERNAME" "USER")))
+  (getenv
+   (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
 (message "Prelude is powering up... Be patient, Master %s!" current-user)
 
-(when (version< emacs-version "24.1")
-  (error "Prelude requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
+(when (version< emacs-version "24.4")
+  (error "Prelude requires at least GNU Emacs 24.4, but you're running %s" emacs-version))
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
@@ -93,7 +100,7 @@ by Prelude.")
 ;; preload the personal settings from `prelude-personal-preload-dir'
 (when (file-exists-p prelude-personal-preload-dir)
   (message "Loading personal configuration files in %s..." prelude-personal-preload-dir)
-  (mapc 'load (directory-files prelude-personal-preload-dir 't "^[^#].*el$")))
+  (mapc 'load (directory-files prelude-personal-preload-dir 't "^[^#\.].*el$")))
 
 (message "Loading Prelude's core...")
 
@@ -116,7 +123,7 @@ by Prelude.")
 (if (file-exists-p prelude-modules-file)
     (load prelude-modules-file)
   (message "Missing modules file %s" prelude-modules-file)
-  (message "You can get started by copying the bundled example file"))
+  (message "You can get started by copying the bundled example file from sample/prelude-modules.el"))
 
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" prelude-personal-dir))
@@ -124,7 +131,7 @@ by Prelude.")
 ;; load the personal settings (this includes `custom-file')
 (when (file-exists-p prelude-personal-dir)
   (message "Loading personal configuration files in %s..." prelude-personal-dir)
-  (mapc 'load (directory-files prelude-personal-dir 't "^[^#].*el$")))
+  (mapc 'load (directory-files prelude-personal-dir 't "^[^#\.].*el$")))
 
 (message "Prelude is ready to do thy bidding, Master %s!" current-user)
 
