@@ -9,8 +9,11 @@
 (global-set-key (kbd "<f8>") 'multi-term)
 (global-set-key (kbd "<f9>") 'speedbar)
 (global-set-key (kbd "<f10>") 'tmm-menubar)  ; also in X11
+
+;; General bindings
 (global-set-key (kbd "§") 'god-mode-all)
 (global-set-key (kbd "C-§") 'god-mode-all)
+(global-set-key (kbd "M-*") 'pop-tag-mark)
 
 ;; Org-capture
 (global-set-key (kbd "C-c c") 'org-capture)
