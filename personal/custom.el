@@ -29,6 +29,11 @@
  '(org-directory "~/Documents/org")
  '(org-todo-keyword-faces (quote (("TODO" . "#f44") ("STARTED" . "#ee8"))))
  '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa" . "https://melpa.org/packages/")
+     ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
  '(prelude-auto-save nil)
  '(prelude-clean-whitespace-on-save nil)
  '(projectile-mode-line-lighter "Pt")
