@@ -1,6 +1,9 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(add-to-list 'package-archives
+             '("elpy" . "http://jorgenschaefer.github.io/packages/") t)
+
 (setq package-pinned-packages
       '(
         (ace-window . "melpa-stable")
@@ -34,6 +37,7 @@
         (elisp-slime-nav . "melpa-stable")
         (elixir-mode . "melpa-stable")
         (elm-mode . "melpa-stable")
+        (elpy . "elpy")
         (ensime . "melpa-stable")
         (epl . "melpa-stable")
         (erlang . "melpa-stable")

@@ -30,11 +30,6 @@
  '(org-directory "~/Documents/org")
  '(org-todo-keyword-faces (quote (("TODO" . "#f44") ("STARTED" . "#ee8"))))
  '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
- '(package-archives
-   (quote
-    (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "https://melpa.org/packages/")
-     ("elpy" . "http://jorgenschaefer.github.io/packages/"))))
  '(package-selected-packages
    (quote
     (csv-mode scss-mode indium po-mode less-css-mode yaml-mode zop-to-char zenburn-theme workgroups2 which-key web-mode wcheck-mode volatile-highlights undo-tree smex smartrep smartparens smart-mode-line rainbow-mode rainbow-delimiters ov operate-on-number multi-term move-text markdown-mode magit json-mode js2-mode jinja2-mode jabber imenu-anywhere ido-completing-read+ helm-swoop helm-projectile helm-git-grep guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck flx-ido expand-region elpy elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl cyberpunk-theme crux coffee-mode browse-kill-ring beacon anzu ace-window)))
