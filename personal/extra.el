@@ -11,6 +11,7 @@
 ;; Theme
 (prelude-require-packages '(cyberpunk-theme))
 (load-theme 'cyberpunk t)
+(set-face-background 'cursor "#dcdccc")
 
 ;; workgroups2
 (prelude-require-packages '(workgroups2))
