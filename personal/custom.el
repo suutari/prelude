@@ -24,6 +24,7 @@
  '(fill-column 72)
  '(helm-M-x-fuzzy-match t)
  '(helm-git-grep-at-point-deactivate-mark t)
+ '(js2-strict-trailing-comma-warning nil)
  '(org-agenda-files (quote ("~/Documents/org")))
  '(org-default-notes-file "notes.org")
  '(org-directory "~/Documents/org")
