@@ -21,7 +21,6 @@
 (prelude-require-packages '(elpy))
 (require 'elpy)
 (elpy-enable)
-(elpy-use-ipython)
 
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))
