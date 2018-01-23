@@ -21,7 +21,6 @@
 (prelude-require-packages '(elpy))
 (require 'elpy)
 (elpy-enable)
-(elpy-use-ipython)
 
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))
@@ -64,3 +63,25 @@
 ;; Fonts and stuff =========================================
 
 (set-face-attribute 'default nil :height 90)
+
+
+;; Tide (TypeScript IDE) ===================================
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "tsx" (file-name-extension buffer-file-name))
+              (setup-tide-mode))))
+;; enable typescript-tslint checker
+(flycheck-add-mode 'typescript-tslint 'web-mode)
+
+(add-to-list 'compilation-error-regexp-alist
+             '("^\\[\\([0-9]+\\), \\([0-9]+\\)\\]: [^\n]*" nil 1 2))
+(add-to-list 'compilation-error-regexp-alist
+             '("^\\([^\n[]+\\)\n\\[\\([0-9]+\\), \\([0-9]+\\)\\]:" 1 2 3))
+
+(add-to-list 'compilation-error-regexp-alist
+             '("^(\\([0-9]+\\),\\([0-9]+\\)): [^\n]*" nil 1 2))
+(add-to-list 'compilation-error-regexp-alist
+             '("^\\([^\n(]+\\)\n(\\([0-9]+\\),\\([0-9]+\\)):" 1 2 3))
