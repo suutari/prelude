@@ -22,7 +22,6 @@
  '(elpy-rpc-timeout 5)
  '(elpy-test-runner (quote elpy-test-pytest-runner))
  '(fill-column 72)
- '(flycheck-javascript-flow-executable "/home/tuomas/.nvm/versions/node/v8.9.0/bin/flow")
  '(helm-M-x-fuzzy-match t)
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 2)
