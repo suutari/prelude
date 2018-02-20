@@ -61,6 +61,7 @@
  '(typescript-indent-level 4)
  '(web-mode-code-indent-offset 4)
  '(web-mode-css-indent-offset 4)
+ '(web-mode-enable-css-colorization t)
  '(web-mode-markup-indent-offset 4)
  '(wg-session-file "~/.emacs.d/savefile/workgroups")
  '(whitespace-line-column 120)
