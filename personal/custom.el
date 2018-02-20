@@ -57,6 +57,7 @@
  '(sp-autoinsert-pair nil)
  '(sp-autoskip-closing-pair nil)
  '(sp-escape-quotes-after-insert nil)
+ '(tide-completion-detailed t)
  '(typescript-indent-level 4)
  '(web-mode-code-indent-offset 4)
  '(web-mode-css-indent-offset 4)
