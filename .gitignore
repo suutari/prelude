@@ -17,6 +17,7 @@ private.el
 places
 .smex-items
 savefile/
+/indium-workspaces.el
 /persp-confs/
 /tramp
 /prelude-modules.el
@@ -31,4 +32,3 @@ network-security.data
 prelude-cheatsheet.el
 prelude-cheatsheet.aux
 prelude-cheatsheet.log
-/indium-workspaces.el
