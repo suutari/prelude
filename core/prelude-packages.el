@@ -59,6 +59,7 @@
     beacon
     browse-kill-ring
     crux
+    cyberpunk-theme
     dash
     discover-my-major
     diff-hl
