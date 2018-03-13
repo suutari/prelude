@@ -66,9 +66,12 @@
 ;; more useful frame title, that show either a file or a
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
-      '("" invocation-name " Prelude - " (:eval (if (buffer-file-name)
-                                            (abbreviate-file-name (buffer-file-name))
-                                          "%b"))))
+      '(
+        "%b ["
+        (:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name)) ""))
+        "] "
+        invocation-name))
 
 ;; use zenburn as the default theme
 (when prelude-theme
