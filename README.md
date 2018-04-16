@@ -5,8 +5,6 @@
 Emacs Prelude
 =============
 
-[![Join the chat at https://gitter.im/bbatsov/prelude](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bbatsov/prelude?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 Prelude is an Emacs distribution that aims to enhance the default
 Emacs experience.  Prelude alters a lot of the default settings,
 bundles a plethora of additional packages and adds its own core
@@ -52,6 +50,7 @@ You can support the development of Prelude via
         - [Helm](#helm)
         - [Key-chords](#key-chords)
             - [Disabling key-chords](#disabling-key-chords)
+    - [Cheatsheet](#cheatsheet)
 - [Automatic package installation](#automatic-package-installation)
     - [Color Themes](#color-themes)
     - [Personalizing](#personalizing)
@@ -484,8 +483,32 @@ If you're an `evil-mode` user you'll probably do well to disable `key-chord-mode
 
 #### vim emulation
 
-If you want to use vim inside of emacs enable the `prelude-evil` module which provides
+If you want to use vim keybindings inside of Emacs enable the `prelude-evil` module which provides
 support for `evil-mode`.
+
+### Cheatsheet
+
+Use `C-h k <key>` (`<key>` are the ones listed on the left) or `C-h f <function>` (`<function>` are the ones listed on the right) to see the detailed explanation.
+
+![cheatsheet](/modules/doc/cheatsheet.png)
+
+#### PDF generation
+
+Install [LaTeX](https://www.latex-project.org/get/)
+
+``` bash
+cd modules/doc
+pdflatex prelude-cheatsheet.tex
+```
+
+#### PNG generation
+
+Install [Poppler](https://poppler.freedesktop.org/)
+
+``` bash
+cd modules/doc
+pdftocairo -png -singlefile prelude-cheatsheet.pdf cheatsheet
+```
 
 ## Automatic package installation
 
@@ -521,7 +544,7 @@ line:
 Or you can use another theme altogether by adding something in `personal/preload` like:
 
 ```lisp
-(prelude-require-package 'solarized)
+(prelude-require-package 'solarized-theme)
 (setq prelude-theme 'solarized-dark)
 ```
 
@@ -713,7 +736,7 @@ Support is available via several channels:
 * Prelude's Google Group <emacs-prelude@googlegroups.com>
 * Prelude's Freenode channel (`#prelude-emacs`)
 * [Gitter](https://gitter.im/bbatsov/prelude)
-.
+
 ## Contributors
 
 Here's a [list](https://github.com/bbatsov/prelude/contributors) of all the people who have contributed to the
