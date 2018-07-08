@@ -59,6 +59,7 @@
  '(sp-escape-quotes-after-insert nil)
  '(tide-completion-detailed t)
  '(typescript-indent-level 4)
+ '(web-mode-attr-indent-offset 4)
  '(web-mode-code-indent-offset 4)
  '(web-mode-css-indent-offset 4)
  '(web-mode-enable-css-colorization t)
