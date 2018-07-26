@@ -22,11 +22,6 @@
 (require 'elpy)
 (elpy-enable)
 
-;; importmagic
-(prelude-require-packages '(importmagic))
-(require 'importmagic)
-(add-hook 'python-mode-hook 'importmagic-mode)
-
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))
 (sml/setup)
