@@ -72,8 +72,6 @@
     git-timemachine
     gitconfig-mode
     gitignore-mode
-    god-mode
-    grizzl
     guru-mode
     hl-todo
     imenu-anywhere
@@ -81,7 +79,6 @@
     magit
     move-text
     operate-on-number
-    smart-mode-line
     smartparens
     smartrep
     undo-tree
