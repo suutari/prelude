@@ -66,7 +66,7 @@
  '(web-mode-markup-indent-offset 4)
  '(wg-session-file "~/.emacs.d/savefile/workgroups")
  '(whitespace-line-column 120)
- '(winner-mode t nil (winner)))
+ '(winner-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
