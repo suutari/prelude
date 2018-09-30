@@ -344,7 +344,6 @@ Keybinding         | Description
 <kbd>C-c . #</kbd> | Convert integer at point to specified base. Default is 10.
 <kbd>C-c . %</kbd> | Replace integer at point with another specified integer.
 <kbd>C-c . '</kbd> | Perform arithmetic operations on integer at point. User specifies the operator.
-<kbd>Super-g</kbd> | Toggle between God mode and non-God mode
 <kbd>Super-r</kbd> | Recent files
 <kbd>Super-j</kbd> | Join lines
 <kbd>Super-k</kbd> | Kill whole line
@@ -527,15 +526,16 @@ line:
 Or you can use another theme altogether by adding something in `personal/preload` like:
 
 ```lisp
-(prelude-require-package 'solarized-theme)
-(setq prelude-theme 'solarized-dark)
+(setq prelude-theme 'tango)
 ```
 
-**Note** [Solarized](https://github.com/bbatsov/zenburn-emacs) is not
-available by default - you'll have to install it from MELPA first,
-therefore the need for `prelude-require-package`.  Alternatively you
-can manually install the package like this - `M-x package-install RET
-solarized-theme`.
+**Note** To use a non-built-in theme, like [Solarized](https://github.com/bbatsov/zenburn-emacs),
+you'll have to install it from MELPA first by `M-x package-install RET solarized-theme`. Then add
+
+``` lisp
+(setq prelude-theme 'solarized-dark)
+```
+in `personal/preload`.
 
 Finally, if you don't want any theme at all, you can add this to your
 `personal/preload`:
