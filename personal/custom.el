@@ -37,7 +37,7 @@
     (flow-minor-mode company-flow flycheck-flow flycheck-mypy cython-mode tide typescript-mode csv-mode scss-mode indium po-mode less-css-mode yaml-mode zop-to-char zenburn-theme workgroups2 which-key web-mode wcheck-mode volatile-highlights undo-tree smex smartrep smartparens smart-mode-line rainbow-mode rainbow-delimiters ov operate-on-number multi-term move-text markdown-mode magit json-mode js2-mode jinja2-mode jabber imenu-anywhere ido-completing-read+ helm-swoop helm-projectile helm-git-grep guru-mode grizzl god-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck flx-ido expand-region elpy elisp-slime-nav editorconfig easy-kill discover-my-major diminish diff-hl cyberpunk-theme crux coffee-mode browse-kill-ring beacon anzu ace-window)))
  '(prelude-auto-save nil)
  '(prelude-clean-whitespace-on-save nil)
- '(projectile-mode-line-lighter "Pt")
+ '(projectile-mode-line-prefix "Pt")
  '(projectile-project-root-files-bottom-up (quote (".projectile" ".hg" ".fslckout" ".bzr" "_darcs")))
  '(projectile-project-root-files-top-down-recurring (quote (".git" ".svn" "CVS")))
  '(projectile-remember-window-configs t)
