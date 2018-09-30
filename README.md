@@ -12,11 +12,12 @@ library to the mix. The final product offers an easy to use Emacs
 configuration for Emacs newcomers and lots of additional power for
 Emacs power users.
 
-Prelude is compatible **ONLY with GNU Emacs 24.4+**. In general you're
+Prelude is compatible **ONLY with GNU Emacs 25.1+**. In general you're
 advised to always run Prelude with the latest Emacs - currently
-**25.2**.
+**26.1**.
 
 You can support the development of Prelude via
+[PayPal](https://www.paypal.me/bbatsov),
 [Salt](https://bountysource.com/teams/prelude),
 [Patreon](https://www.patreon.com/bbatsov) and
 [Liberapay](https://liberapay.com/bbatsov/donate).
@@ -207,7 +208,6 @@ By default most of the modules that ship with Prelude are not loaded. For more i
 (require 'prelude-js)
 ;; (require 'prelude-latex)
 (require 'prelude-lisp)
-;; (require 'prelude-mediawiki)
 (require 'prelude-org)
 (require 'prelude-perl)
 ;; (require 'prelude-python)
@@ -344,7 +344,6 @@ Keybinding         | Description
 <kbd>C-c . #</kbd> | Convert integer at point to specified base. Default is 10.
 <kbd>C-c . %</kbd> | Replace integer at point with another specified integer.
 <kbd>C-c . '</kbd> | Perform arithmetic operations on integer at point. User specifies the operator.
-<kbd>Super-g</kbd> | Toggle between God mode and non-God mode
 <kbd>Super-r</kbd> | Recent files
 <kbd>Super-j</kbd> | Join lines
 <kbd>Super-k</kbd> | Kill whole line
@@ -376,38 +375,21 @@ instead. That's an epic productivity boost and it's not as crazy as it sounds!
 
 #### Projectile
 
-Here's a list of functionality provided by [Projectile](https://github.com/bbatsov/projectile):
+[Projectile](https://github.com/bbatsov/projectile) is one of the essential packages bundled with Prelude.
+It provides an easy way to navigate and switch projects. Take a look at its extensive documentation
+to get a feel for everything you can do with Projectile.
 
-Keybinding         | Description
--------------------|------------------------------------------------------------
-<kbd>C-c p f</kbd> | Display a list of all files in the project. With a prefix argument it will clear the cache first.
-<kbd>C-c p d</kbd> | Display a list of all directories in the project. With a prefix argument it will clear the cache first.
-<kbd>C-c p T</kbd> | Display a list of all test files(specs, features, etc) in the project.
-<kbd>C-c p s g</kbd> | Run grep on the files in the project.
-<kbd>C-c p s s</kbd> | Runs `ag` on the project. Requires the presence of `ag.el`.
-<kbd>M-- C-c p s g</kbd> | Run grep on `projectile-grep-default-files` in the project.
-<kbd>C-c p b</kbd> | Display a list of all project buffers currently open.
-<kbd>C-c p o</kbd> | Runs `multi-occur` on all project buffers currently open.
-<kbd>C-c p r</kbd> | Runs interactive query-replace on all files in the projects.
-<kbd>C-c p i</kbd> | Invalidates the project cache (if existing).
-<kbd>C-c p R</kbd> | Regenerates the projects `TAGS` file.
-<kbd>C-c p k</kbd> | Kills all project buffers.
-<kbd>C-c p D</kbd> | Opens the root of the project in `dired`.
-<kbd>C-c p e</kbd> | Shows a list of recently visited project files.
-<kbd>C-c p a</kbd> | Switch between files with the same name but different extensions.
-<kbd>C-c p c</kbd> | Runs a standard compilation command for your type of project.
-<kbd>C-c p P</kbd> | Runs a standard test command for your type of project.
-<kbd>C-c p z</kbd> | Adds the currently visited to the cache.
-<kbd>C-c p p</kbd> | Display a list of known projects you can switch to.
-
-Prelude adds an extra keymap prefix `S-p` (`S` stands for
-`Super`), so you can use `S-p` instead of `C-c p`. By default on Windows keyboard
+Prelude adds an extra keymap prefix `s-p` (`s` stands for
+`Super`) in addition to the standard one `C-c p`. By default on Windows keyboard
 `Super` is mapped to the `Windows` key and on macOS keyboards `Super` is mapped
 to the `Command` key.
 
 If you ever forget any of Projectile's keybindings just do a:
 
-<kbd>C-c p C-h</kbd>
+<kbd>C-c p C-h</kbd> or <kbd>s-p C-h</kbd>
+
+Alternatively you can just press <kbd>s-p</kbd> and wait for a moment
+for `which-key` to kick in and show you the available keybindings.
 
 #### Helm
 
@@ -544,15 +526,16 @@ line:
 Or you can use another theme altogether by adding something in `personal/preload` like:
 
 ```lisp
-(prelude-require-package 'solarized-theme)
-(setq prelude-theme 'solarized-dark)
+(setq prelude-theme 'tango)
 ```
 
-**Note** [Solarized](https://github.com/bbatsov/zenburn-emacs) is not
-available by default - you'll have to install it from MELPA first,
-therefore the need for `prelude-require-package`.  Alternatively you
-can manually install the package like this - `M-x package-install RET
-solarized-theme`.
+**Note** To use a non-built-in theme, like [Solarized](https://github.com/bbatsov/zenburn-emacs),
+you'll have to install it from MELPA first by `M-x package-install RET solarized-theme`. Then add
+
+``` lisp
+(setq prelude-theme 'solarized-dark)
+```
+in `personal/preload`.
 
 Finally, if you don't want any theme at all, you can add this to your
 `personal/preload`:
@@ -639,7 +622,7 @@ will automatically update the installed packages.
 Prelude makes heavy use of the flyspell-mode package for spell
 checking of various things. The proper operation of flyspell depends
 on the presence of the `aspell` program and an `en` dictionary on your
-system. You can install `aspell` and the dictionary on OS X with
+system. You can install `aspell` and the dictionary on macOS with
 `homebrew` like this:
 
 ```bash
@@ -698,8 +681,8 @@ you don't like that simply add this to your personal config:
 
 ### Poor ido matching performance on large datasets
 
-Prelude swaps the default `ido` flex matching with the more powerful
-[ido-flx](https://github.com/lewang/flx).
+Prelude's `ido` module swaps the default `ido` flex matching with the
+more powerful [ido-flx](https://github.com/lewang/flx).
 
 The sorting algorithm `flx` uses is more complex, but yields better results.
 
@@ -719,7 +702,7 @@ You can always disable the improved sorting algorithm all together like this:
 ### Windows compatibility
 
 While everything in Prelude should work fine in Windows, I test it only
-with Linux & OS X, so there are Windows related problems from time to
+with GNU/Linux & macOS, so there might be Windows-specific problems from time to
 time. This situation will probably improve over time.
 
 ## Known issues
