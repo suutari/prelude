@@ -20,7 +20,6 @@ savefile/
 /indium-workspaces.el
 /persp-confs/
 /tramp
-/prelude-modules.el
 projectile-bookmarks.eld
 session*
 .cask
