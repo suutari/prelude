@@ -21,7 +21,7 @@
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-pyvenv elpy-module-yasnippet elpy-module-sane-defaults)))
  '(elpy-rpc-backend "jedi")
- '(elpy-rpc-timeout 3)
+ '(elpy-rpc-timeout 10)
  '(elpy-test-runner (quote elpy-test-pytest-runner))
  '(fill-column 72)
  '(helm-M-x-fuzzy-match t)
