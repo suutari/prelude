@@ -22,6 +22,9 @@
 (global-set-key
  [remap move-beginning-of-line] 'move-beginning-of-line)
 
+;; Revert default C-x o behavior (other-window)
+(global-set-key [remap other-window] 'other-window)
+
 ;; Binds for my custom functions
 (global-set-key (kbd "C-c C-a") 'dirty-ai-python-mode)
 (global-set-key (kbd "C-c C-b") 'toggle-dirty-mode)
