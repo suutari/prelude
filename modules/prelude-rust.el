@@ -39,30 +39,28 @@
 ;; * rls (Rust Language Server, if the prelude-lsp feature is enabled)
 
 (prelude-require-packages '(rust-mode
-                            cargo))
+                            cargo
+                            flycheck-rust))
 
-(if (featurep 'prelude-lsp)
-    (prelude-require-package 'lsp-rust)
-  (prelude-require-packages '(racer
-                              flycheck-rust)))
+(unless (featurep 'prelude-lsp)
+  (prelude-require-packages '(racer)))
 
 (setq rust-format-on-save t)
-(setq lsp-rust-rls-command '("rustup" "run" "stable" "rls"))
 
 (with-eval-after-load 'rust-mode
   (add-hook 'rust-mode-hook 'cargo-minor-mode)
+  (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
 
   (if (featurep 'prelude-lsp)
-      (progn (require 'lsp-rust)
-             (add-hook 'rust-mode-hook #'lsp-rust-enable))
+      (add-hook 'rust-mode-hook 'lsp)
     (add-hook 'rust-mode-hook 'racer-mode)
-    (add-hook 'racer-mode-hook 'eldoc-mode)
-    (add-hook 'rust-mode-hook 'flycheck-rust-setup)
-    (add-hook 'flycheck-mode-hook 'flycheck-rust-setup))
+    (add-hook 'racer-mode-hook 'eldoc-mode))
 
   (defun prelude-rust-mode-defaults ()
     (unless (featurep 'prelude-lsp)
-      (local-set-key (kbd "C-c C-d") 'racer-describe))
+      (local-set-key (kbd "C-c C-d") 'racer-describe)
+      (local-set-key (kbd "C-c .") 'racer-find-definition)
+      (local-set-key (kbd "C-c ,") 'pop-tag-mark))
 
     ;; Prevent #! from chmodding rust files to be executable
     (remove-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)

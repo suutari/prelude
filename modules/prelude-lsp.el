@@ -37,12 +37,7 @@
                             lsp-ui))
 
 (require 'lsp-ui)
-(require 'company-lsp)
 (require 'lsp-ui-imenu)
-
-(push 'company-lsp company-backends)
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-(add-hook 'lsp-after-open-hook 'lsp-ui-enable-imenu)
 
 (define-key lsp-ui-mode-map [remap xref-find-definitions] #'lsp-ui-peek-find-definitions)
 (define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
@@ -53,6 +48,7 @@
 (define-key lsp-ui-mode-map (kbd "C-c C-l w") 'lsp-ui-peek-find-workspace-symbol)
 (define-key lsp-ui-mode-map (kbd "C-c C-l i") 'lsp-ui-peek-find-implementation)
 (define-key lsp-ui-mode-map (kbd "C-c C-l d") 'lsp-describe-thing-at-point)
+(define-key lsp-ui-mode-map (kbd "C-c C-l e") 'lsp-execute-code-action)
 
 (setq lsp-ui-sideline-enable t)
 (setq lsp-ui-doc-enable t)
