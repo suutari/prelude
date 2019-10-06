@@ -10,7 +10,7 @@
 ;; (require 'prelude-common-lisp)
 (require 'prelude-css)
 (require 'prelude-emacs-lisp)
-(require 'prelude-erc) ;; Emacs IRC client
+;; (require 'prelude-erc) ;; Emacs IRC client
 ;; (require 'prelude-erlang)
 ;; (require 'prelude-haskell)
 (require 'prelude-js)
