@@ -38,9 +38,6 @@
 ;; jinja2-mode
 (prelude-require-packages '(jinja2-mode))
 
-;; jabber
-(prelude-require-packages '(jabber))
-
 ;; ox-reveal (from vendor directory)
 (require 'ox-reveal)
 
