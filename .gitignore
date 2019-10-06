@@ -32,3 +32,5 @@ prelude-cheatsheet.el
 prelude-cheatsheet.aux
 prelude-cheatsheet.log
 /indium-workspaces.el
+/elpy
+/transient
