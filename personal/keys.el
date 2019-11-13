@@ -30,7 +30,7 @@
 (global-set-key (kbd "C-c C-b") 'toggle-dirty-mode)
 (global-set-key (kbd "M-n") 'elpy-nav-forward-definition)
 (global-set-key (kbd "M-p") 'elpy-nav-backward-definition)
-
+(global-set-key (kbd "C-.") 'elpy-goto-assignment)
 
 ;; pyvenv
 (global-set-key (kbd "C-c w") 'pyvenv-workon)
