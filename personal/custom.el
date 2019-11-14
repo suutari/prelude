@@ -35,7 +35,7 @@
  '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
  '(package-selected-packages
    (quote
-    (smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop helm-git-grep smart-mode-line elpy workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window)))
+    (csv-mode htmlize dockerfile-mode markdown-mode smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop helm-git-grep smart-mode-line elpy workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(prelude-auto-save nil)
  '(prelude-clean-whitespace-on-save nil)
