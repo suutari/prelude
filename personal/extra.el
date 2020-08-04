@@ -28,6 +28,29 @@
 
 ;; helm-git-grep (from vendor directory)
 (require 'helm-git-grep)
+(defun helm-git-grep-set-pathspec ()
+  "Interactively update the pathspec for `helm-git-grep'"
+  (interactive)
+  (let ((helm-suspend-update-flag t)
+        (enable-recursive-minibuffers t)
+        pathspecs)
+    (minibuffer-depth-indicate-mode 1)
+    (setq pathspecs (-filter (lambda (x) (not (string-empty-p x)))
+                             (split-string
+                              (read-string "git-grep pathspecs: ") " ")))
+    (helm-log "Using pathspecs: %s" pathspecs)
+    (setq helm-git-grep-pathspecs pathspecs))
+  (helm-git-grep-rerun-with-input))
+
+(put 'helm-git-grep-set-pathspec 'helm-only t)
+(define-key helm-git-grep-map (kbd "C-c z") 'helm-git-grep-set-pathspec)
+
+;; Reset the git-grep pathspec before every invocation
+;; of `helm-git-grep'
+(defun helm-git-grep@clear-pathspecs (&rest _args)
+  (setq helm-git-grep-pathspecs nil))
+
+(advice-add 'helm-git-grep :before 'helm-git-grep@clear-pathspecs)
 
 ;; helm-swoop
 (prelude-require-packages '(helm-swoop))
