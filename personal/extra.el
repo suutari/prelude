@@ -26,8 +26,8 @@
 (prelude-require-packages '(smart-mode-line))
 (sml/setup)
 
-;; helm-git-grep
-(prelude-require-packages '(helm-git-grep))
+;; helm-git-grep (from vendor directory)
+(require 'helm-git-grep)
 
 ;; helm-swoop
 (prelude-require-packages '(helm-swoop))
