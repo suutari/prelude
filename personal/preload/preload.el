@@ -10,3 +10,6 @@
 
 ;; Set Prelude theme
 (setq prelude-theme 'cyberpunk)
+
+;; Disable whitespace mode
+(setq prelude-whitespace nil)
