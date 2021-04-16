@@ -42,6 +42,8 @@
  '(plantuml-server-url "http://www.plantuml.com/plantuml")
  '(prelude-auto-save nil)
  '(prelude-clean-whitespace-on-save nil)
+ '(projectile-git-submodule-command
+   "git submodule --quiet foreach 'echo $toplevel/$sm_path' | tr '\\n' '\\0'")
  '(projectile-mode-line-prefix "Pt")
  '(projectile-project-root-files-bottom-up (quote (".projectile" ".hg" ".fslckout" ".bzr" "_darcs")))
  '(projectile-project-root-files-top-down-recurring (quote (".git" ".svn" "CVS")))
