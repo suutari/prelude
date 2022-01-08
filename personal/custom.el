@@ -29,11 +29,6 @@
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 4)
  '(js2-strict-trailing-comma-warning nil)
- '(org-agenda-files (quote ("~/Documents/org")))
- '(org-default-notes-file "notes.org")
- '(org-directory "~/Documents/org")
- '(org-todo-keyword-faces (quote (("TODO" . "#f44") ("STARTED" . "#ee8"))))
- '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
  '(package-selected-packages
    (quote
     (plantuml-mode graphql-mode csv-mode htmlize dockerfile-mode markdown-mode smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop smart-mode-line elpy workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window)))
