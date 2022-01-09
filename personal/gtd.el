@@ -30,6 +30,22 @@
       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)"
                   "|" "DONE(d)" "CANCELLED(c)")))
 
+(setq org-todo-keyword-faces
+      '(
+        ("TODO" . (:weight bold :box
+                              (:line-width 1 :color nil :style none)
+                              :foreground "#e42"))
+        ("STARTED" . (:weight bold :box
+                              (:line-width 1 :color nil :style none)
+                              :foreground "#d90"))
+        ("WAITING" . (:weight bold :box
+                              (:line-width 1 :color nil :style none)
+                              :foreground "#a3c"))
+        ("CANCELED" . (:weight bold :box
+                               (:line-width 1 :color nil :style none)
+                               :foreground "#380"))
+        ))
+
 (setq org-agenda-custom-commands
       '(
         ("h" "Kotona" tags-todo "@koti"
