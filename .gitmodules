@@ -4,6 +4,3 @@
 [submodule "vendor/helm-git-grep"]
 	path = vendor/helm-git-grep
 	url = https://github.com/suutari-ai/helm-git-grep.git
-[submodule "vendor/workgroups2"]
-	path = vendor/workgroups2
-	url = https://github.com/pashinin/workgroups2

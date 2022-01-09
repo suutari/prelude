@@ -49,15 +49,6 @@
   (if (file-exists-p prelude-pinned-packages-file)
       (load prelude-pinned-packages-file)))
 
-
-(require 'package-x)
-(defvar local-archive
-  (expand-file-name "vendor-archive/" user-emacs-directory)
-  "Location of the package archive.")
-(setq package-archive-upload-base local-archive)
-(add-to-list 'package-archives `("vendor-archive" . ,local-archive) t)
-
-
 ;; set package-user-dir to be relative to Prelude install path
 (setq package-user-dir (expand-file-name "elpa" prelude-dir))
 (package-initialize)
