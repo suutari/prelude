@@ -31,11 +31,6 @@
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 4)
  '(js2-strict-trailing-comma-warning nil)
- '(org-agenda-files (quote ("~/Documents/org")))
- '(org-default-notes-file "notes.org")
- '(org-directory "~/Documents/org")
- '(org-todo-keyword-faces (quote (("TODO" . "#f44") ("STARTED" . "#ee8"))))
- '(org-todo-keywords (quote ((sequence "TODO" "STARTED" "DONE"))))
  '(package-pinned-packages (quote ((workgroups2 . "vendor-archive"))))
  '(package-selected-packages
    (quote
