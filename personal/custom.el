@@ -11,6 +11,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(adaptive-fill-regexp "[ 	]*\\([-–!|#%;:>*·•‣⁃◦]+[ 	]*\\)*")
+ '(company-idle-delay 5)
+ '(company-minimum-prefix-length 3)
  '(custom-enabled-themes (quote (smart-mode-line-respectful)))
  '(custom-safe-themes
    (quote
