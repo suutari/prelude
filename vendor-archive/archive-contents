@@ -1,0 +1,13 @@
+(1
+ (workgroups2 .
+              [(1 2 1)
+               ((emacs
+                 (25 1))
+                (dash
+                 (2 8 0)))
+               "New workspaces for Emacs" single
+               ((:authors
+                 ("Sergey Pashinin <sergey at pashinin dot com>"))
+                (:maintainer "Sergey Pashinin <sergey at pashinin dot com>")
+                (:url . "https://github.com/pashinin/workgroups2"))]))
+
