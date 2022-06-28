@@ -37,3 +37,4 @@ var/
 .lsp-session*
 /indium-workspaces.el
 /elpy
+/org-clock-save.el
