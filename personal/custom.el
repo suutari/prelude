@@ -31,6 +31,7 @@
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 4)
  '(js2-strict-trailing-comma-warning nil)
+ '(org-columns-default-format "%50ITEM %TODO %2PRIORITY %10Effort %10CLOCKSUM %TAGS")
  '(package-pinned-packages (quote ((workgroups2 . "vendor-archive"))))
  '(package-selected-packages
    (quote

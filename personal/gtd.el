@@ -11,7 +11,9 @@
 (setq org-agenda-files
       '("~/Documents/gtd/inbox.org"
         "~/Documents/gtd/projects.org"
-        "~/Documents/gtd/tickler.org"))
+        "~/Documents/gtd/tickler.org"
+        "~/projects/gtd/work.org"
+        ))
 
 (setq org-capture-templates
       '(("t" "Todo [inbox]" entry
