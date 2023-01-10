@@ -21,12 +21,18 @@
          "* TODO %i%?")
         ("T" "Tickler" entry
          (file+headline "~/Documents/gtd/tickler.org" "Tickler")
-         "* %i%? \n %U")))
+         "* %i%? \n %U")
+        ("w" "Work" entry
+         (file+headline "~/projects/gtd/work.org" "Misc")
+         "**** %i%?")
+        ))
 
 (setq org-refile-targets
       '(("~/Documents/gtd/projects.org" :maxlevel . 3)
         ("~/Documents/gtd/someday.org" :level . 1)
-        ("~/Documents/gtd/tickler.org" :maxlevel . 2)))
+        ("~/Documents/gtd/tickler.org" :maxlevel . 2)
+        ("~/projects/gtd/work.org" :maxlevel . 3)
+        ))
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)"
