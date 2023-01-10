@@ -35,6 +35,8 @@ transient/
 var/
 .cache/
 .lsp-session*
+gotools/
+eln-cache/
 /indium-workspaces.el
 /elpy
 /org-clock-save.el

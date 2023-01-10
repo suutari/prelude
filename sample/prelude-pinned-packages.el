@@ -87,6 +87,7 @@
         (macrostep . "melpa-stable")
         (magit . "melpa-stable")
         (magit-popup . "melpa-stable")
+        (magit-section . "melpa-stable")
         (makey . "melpa-stable")
         (markdown-mode . "melpa-stable")
         (marshal . "melpa-stable")
