@@ -28,23 +28,23 @@
   (flymake-mode 'toggle))
 
 ;; Navigating in Python files
-(defun elpy-nav-forward-definition ()
-  "Move forward to the next definition (class or function)."
-  (interactive)
-  (if (save-excursion
-        (forward-char 1)
-        (re-search-forward "^[ \t]*\\(def\\|class\\) " nil t))
-      (goto-char (match-beginning 1))
-    (goto-char (point-max))))
+;; (defun elpy-nav-forward-definition ()
+;;   "Move forward to the next definition (class or function)."
+;;   (interactive)
+;;   (if (save-excursion
+;;         (forward-char 1)
+;;         (re-search-forward "^[ \t]*\\(def\\|class\\) " nil t))
+;;       (goto-char (match-beginning 1))
+;;     (goto-char (point-max))))
 
-(defun elpy-nav-backward-definition ()
-  "Move backward to the previous definition (class or function)."
-  (interactive)
-  (if (save-excursion
-        (forward-char -1)
-        (re-search-backward "^[ \t]*\\(def\\|class\\) " nil t))
-      (goto-char (match-beginning 1))
-    (goto-char (point-min))))
+;; (defun elpy-nav-backward-definition ()
+;;   "Move backward to the previous definition (class or function)."
+;;   (interactive)
+;;   (if (save-excursion
+;;         (forward-char -1)
+;;         (re-search-backward "^[ \t]*\\(def\\|class\\) " nil t))
+;;       (goto-char (match-beginning 1))
+;;     (goto-char (point-min))))
 
 ;; JavaScript / TypeScript indentation style switching
 (require 'js2-mode)

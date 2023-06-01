@@ -18,9 +18,14 @@
 (workgroups-mode 1)
 
 ;; elpy
-(prelude-require-packages '(elpy))
-(require 'elpy)
-(elpy-enable)
+;(prelude-require-packages '(elpy))
+;(require 'elpy)
+;(elpy-enable)
+
+;; LSP
+(require 'lsp-mode)
+(setq lsp-keymap-prefix "s-L")
+(add-hook 'python-mode-hook #'lsp)
 
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))
