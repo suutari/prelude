@@ -18,6 +18,7 @@
 ;; (require 'prelude-key-chord) ;; Binds useful features to key combinations
 ;; (require 'prelude-latex)
 (require 'prelude-lisp)
+(require 'prelude-lsp) ;; Base setup for the Language Server Protocol
 ;; (require 'prelude-mediawiki)
 (require 'prelude-org) ;; Org-mode helps you keep TODO lists, notes and more
 ;; (require 'prelude-perl)
