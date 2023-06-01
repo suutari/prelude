@@ -87,7 +87,7 @@
 
 ;; Fonts and stuff =========================================
 
-(set-face-attribute 'default nil :height 90)
+(set-face-attribute 'default nil :height 110)
 
 
 ;; Tide (TypeScript IDE) ===================================
