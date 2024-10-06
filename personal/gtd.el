@@ -35,23 +35,29 @@
         ))
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)"
-                  "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "WAITING(w)"
+                  "|" "DONE(d)" "CANCELED(c)")))
 
 (setq org-todo-keyword-faces
       '(
         ("TODO" . (:weight bold :box
                               (:line-width 1 :color nil :style none)
                               :foreground "#e42"))
+        ("NEXT" . (:weight bold :box
+                              (:line-width 1 :color nil :style none)
+                              :foreground "#d81"))
         ("STARTED" . (:weight bold :box
                               (:line-width 1 :color nil :style none)
-                              :foreground "#d90"))
+                              :foreground "#dc0"))
         ("WAITING" . (:weight bold :box
                               (:line-width 1 :color nil :style none)
                               :foreground "#a3c"))
         ("CANCELED" . (:weight bold :box
                                (:line-width 1 :color nil :style none)
-                               :foreground "#380"))
+                               :foreground "#820"))
+        ("DONE" . (:weight bold :box
+                               (:line-width 1 :color nil :style none)
+                               :foreground "#480"))
         ))
 
 (setq org-agenda-custom-commands
