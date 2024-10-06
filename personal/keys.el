@@ -34,7 +34,7 @@
 
 (global-set-key (kbd "M-.") 'lsp-find-definition)
 (global-set-key (kbd "C-.") 'lsp-ui-peek-find-definitions)
-
+(global-set-key (kbd "M-*") 'xref-pop-marker-stack)
 
 
 ;; pyvenv

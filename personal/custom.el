@@ -19,12 +19,15 @@
  '(dired-omit-files
    "^\\.?#\\|^\\.$\\|^\\.\\.$\\|^\\.git\\|^__pycache__\\|\\.pyc$")
  '(fill-column 72)
+ '(flymake-ruff-program "/home/tuomas/bin/ruffw")
+ '(flyspell-default-dictionary "en")
  '(helm-M-x-fuzzy-match t)
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 4)
  '(js2-strict-trailing-comma-warning nil)
  '(lsp-pyls-disable-warning t)
  '(lsp-pyls-plugins-flake8-enabled t)
+ '(lsp-pyls-plugins-jedi-completion-enabled nil)
  '(lsp-pyls-plugins-jedi-use-pyenv-environment t)
  '(lsp-pyls-server-command '("/home/tuomas/.pyenv/versions/pyls/bin/pyls"))
  '(lsp-pylsp-plugins-black-enabled t)
@@ -36,11 +39,11 @@
  '(lsp-pylsp-plugins-preload-modules [])
  '(lsp-pylsp-plugins-pycodestyle-exclude [])
  '(lsp-pylsp-rope-rope-folder [])
- '(lsp-pylsp-server-command '("pylsp.DISABLED"))
+ '(lsp-pylsp-server-command '("/home/tuomas/.pyenv/versions/pylsp/bin/pylsp.DISABLED"))
  '(org-columns-default-format "%50ITEM %TODO %2PRIORITY %10Effort %10CLOCKSUM %TAGS")
  '(package-pinned-packages '((workgroups2 . "vendor-archive")))
  '(package-selected-packages
-   '(ruff-format pyenv-mode lsp-ui lsp-mode scss-mode flycheck-plantuml plantuml-mode graphql-mode csv-mode htmlize dockerfile-mode markdown-mode smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop smart-mode-line workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window))
+   '(gnu-elpa-keyring-update ruff-format php-mode pyenv-mode lsp-ui lsp-mode scss-mode flycheck-plantuml plantuml-mode graphql-mode csv-mode htmlize dockerfile-mode markdown-mode smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop smart-mode-line workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window))
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(plantuml-default-exec-mode 'jar)
  '(plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
@@ -57,6 +60,7 @@
  '(projectile-use-git-grep t)
  '(python-check-command "flake8")
  '(python-fill-docstring-style 'django)
+ '(ruff-format-command "~/.pyenv/versions/ruff/bin/ruff")
  '(safe-local-variable-values '((encoding . utf-8)))
  '(server-mode t)
  '(server-temp-file-regexp
@@ -85,6 +89,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#000000" :foreground "#d3d3d3" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "GOOG" :family "Noto Sans Mono"))))
  '(cursor ((t (:background "#dcdccc"))))
  '(magit-diff-add ((((class color) (background dark)) (:foreground "green"))) t)
  '(magit-item-highlight ((t (:inherit secondary-selection :background "#011" :foreground "white"))) t))
