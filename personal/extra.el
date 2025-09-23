@@ -12,6 +12,10 @@
 (prelude-require-packages '(cyberpunk-theme))
 (load-theme 'cyberpunk t)
 (set-face-background 'cursor "#dcdccc")
+(add-hook  ;; Set bigger font when Emacs has been initialized
+ 'after-init-hook
+ (lambda ()
+   (set-face-attribute 'default nil :height 113)))
 
 ;; workgroups2
 (prelude-require-packages '(workgroups2))
