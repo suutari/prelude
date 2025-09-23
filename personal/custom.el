@@ -40,7 +40,7 @@
  '(lsp-pylsp-plugins-preload-modules [])
  '(lsp-pylsp-plugins-pycodestyle-exclude [])
  '(lsp-pylsp-rope-rope-folder [])
- '(lsp-pylsp-server-command '("/home/tuomas/.pyenv/versions/pylsp/bin/pylsp.DISABLED"))
+ '(lsp-pylsp-server-command '("/home/tuomas/.pyenv/versions/pylsp/bin/pylsp"))
  '(org-columns-default-format "%50ITEM %TODO %2PRIORITY %10Effort %10CLOCKSUM %TAGS")
  '(package-pinned-packages '((workgroups2 . "vendor-archive")))
  '(package-selected-packages
