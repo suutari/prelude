@@ -25,6 +25,7 @@
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 4)
  '(js2-strict-trailing-comma-warning nil)
+ '(lsp-enable-file-watchers nil)
  '(lsp-pyls-disable-warning t)
  '(lsp-pyls-plugins-flake8-enabled t)
  '(lsp-pyls-plugins-jedi-completion-enabled nil)
