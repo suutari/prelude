@@ -31,6 +31,9 @@
 (setq lsp-keymap-prefix "s-L")
 (add-hook 'python-mode-hook #'lsp)
 
+(prelude-require-packages '(auto-virtualenv))
+(auto-virtualenv-setup)
+
 ;; smart-mode-line
 (prelude-require-packages '(smart-mode-line))
 (sml/setup)
