@@ -29,6 +29,11 @@
 (global-set-key (kbd "C-.") 'lsp-ui-peek-find-definitions)
 (global-set-key (kbd "M-*") 'xref-pop-marker-stack)
 
+(require 'lsp-mode)
+(global-set-key (kbd "C-S-i") (lambda ()
+                                (interactive)
+                                (lsp-format-buffer)
+                                (lsp-organize-imports)))
 
 ;; pyvenv
 (global-set-key (kbd "C-c w") 'pyvenv-workon)
