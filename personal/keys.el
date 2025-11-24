@@ -25,13 +25,6 @@
 ;; Revert default C-x o behavior (other-window)
 (global-set-key [remap other-window] 'other-window)
 
-;; Binds for my custom functions
-(global-set-key (kbd "C-c C-a") 'dirty-ai-python-mode)
-(global-set-key (kbd "C-c C-b") 'toggle-dirty-mode)
-;(global-set-key (kbd "M-n") 'elpy-nav-forward-definition)
-;(global-set-key (kbd "M-p") 'elpy-nav-backward-definition)
-;(global-set-key (kbd "C-.") 'elpy-goto-assignment)
-
 (global-set-key (kbd "M-.") 'lsp-find-definition)
 (global-set-key (kbd "C-.") 'lsp-ui-peek-find-definitions)
 (global-set-key (kbd "M-*") 'xref-pop-marker-stack)
