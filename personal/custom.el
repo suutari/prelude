@@ -39,6 +39,7 @@
  '(lsp-pylsp-plugins-jedi-use-pyenv-environment t)
  '(lsp-pylsp-plugins-preload-modules [])
  '(lsp-pylsp-plugins-pycodestyle-exclude [])
+ '(lsp-pylsp-plugins-ruff-enabled t)
  '(lsp-pylsp-rope-rope-folder [])
  '(lsp-pylsp-server-command '("/home/tuomas/.pyenv/versions/pylsp/bin/pylsp"))
  '(org-columns-default-format "%50ITEM %TODO %2PRIORITY %10Effort %10CLOCKSUM %TAGS")
