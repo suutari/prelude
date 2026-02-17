@@ -11,8 +11,6 @@
 (global-set-key (kbd "<f10>") 'tmm-menubar)  ; also in X11
 
 ;; General bindings
-(global-set-key (kbd "§") 'god-mode-all)
-(global-set-key (kbd "C-§") 'god-mode-all)
 (global-set-key (kbd "M-*") 'pop-tag-mark)
 
 ;; Org-capture
