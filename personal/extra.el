@@ -126,8 +126,8 @@
           (lambda ()
             (when (string-equal "tsx" (file-name-extension buffer-file-name))
               (setup-tide-mode))))
-;; enable typescript-tslint checker
-(flycheck-add-mode 'typescript-tslint 'web-mode)
+;; enable javascript-eslint checker in web-mode
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;; Error message formats
 
