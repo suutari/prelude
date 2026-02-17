@@ -35,6 +35,20 @@
   (define-key company-mode-map (kbd "<tab>")
               'company-indent-or-complete-common))
 
+
+;; GitHub Copilot
+(require 'copilot)
+(define-key copilot-completion-map (kbd "<tab>")
+            'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "TAB")
+            'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "<backtab>") ; Shift+Tab
+            'copilot-accept-completion-by-word)
+(define-key copilot-completion-map (kbd "C-<tab>") ; Ctrl+Tab
+            'copilot-next-completion)
+(define-key copilot-completion-map (kbd "C-<iso-lefttab>") ; Ctrl+Shift+Tab
+            'copilot-previous-completion)
+
 ;; pyvenv
 (global-set-key (kbd "C-c w") 'pyvenv-workon)
 
