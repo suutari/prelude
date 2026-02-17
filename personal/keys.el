@@ -29,6 +29,12 @@
 (define-key lsp-mode-map (kbd "M-o") 'lsp-organize-imports)
 (define-key lsp-mode-map (kbd "C-S-i") 'lsp-format-buffer)
 
+;; Use company for completions
+(require 'company)
+(with-eval-after-load 'company
+  (define-key company-mode-map (kbd "<tab>")
+              'company-indent-or-complete-common))
+
 ;; pyvenv
 (global-set-key (kbd "C-c w") 'pyvenv-workon)
 
