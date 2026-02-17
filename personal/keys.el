@@ -23,15 +23,11 @@
 ;; Revert default C-x o behavior (other-window)
 (global-set-key [remap other-window] 'other-window)
 
-(global-set-key (kbd "M-.") 'lsp-find-definition)
-(global-set-key (kbd "C-.") 'lsp-ui-peek-find-definitions)
-(global-set-key (kbd "M-*") 'xref-pop-marker-stack)
-
 (require 'lsp-mode)
-(global-set-key (kbd "C-S-i") (lambda ()
-                                (interactive)
-                                (lsp-format-buffer)
-                                (lsp-organize-imports)))
+(define-key lsp-mode-map (kbd "M-.") 'lsp-find-definition)
+(define-key lsp-mode-map (kbd "C-.") 'lsp-ui-peek-find-definitions)
+(define-key lsp-mode-map (kbd "M-o") 'lsp-organize-imports)
+(define-key lsp-mode-map (kbd "C-S-i") 'lsp-format-buffer)
 
 ;; pyvenv
 (global-set-key (kbd "C-c w") 'pyvenv-workon)
