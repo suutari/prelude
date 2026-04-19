@@ -24,6 +24,7 @@
  '(helm-git-grep-at-point-deactivate-mark t)
  '(js-indent-level 4)
  '(js2-strict-trailing-comma-warning nil)
+ '(lsp-clangd-binary-path "clangd")
  '(lsp-disabled-clients '(lsp-ruff))
  '(lsp-enable-file-watchers nil)
  '(lsp-pyls-disable-warning t)
@@ -45,7 +46,7 @@
  '(org-columns-default-format "%50ITEM %TODO %2PRIORITY %10Effort %10CLOCKSUM %TAGS")
  '(package-pinned-packages '((workgroups2 . "vendor-archive")))
  '(package-selected-packages
-   '(ag nlinum git-modes undo-tree typescript-mode copilot pyvenv nginx-mode gnu-elpa-keyring-update php-mode pyenv-mode lsp-ui lsp-mode scss-mode flycheck-plantuml plantuml-mode graphql-mode csv-mode htmlize dockerfile-mode markdown-mode smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop smart-mode-line workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window))
+   '(svelte-mode arduino-mode ag nlinum git-modes undo-tree typescript-mode copilot pyvenv nginx-mode gnu-elpa-keyring-update php-mode pyenv-mode lsp-ui lsp-mode scss-mode flycheck-plantuml plantuml-mode graphql-mode csv-mode htmlize dockerfile-mode markdown-mode smex ido-completing-read+ flx-ido cython-mode wcheck-mode jinja2-mode multi-term helm-swoop smart-mode-line workgroups2 yaml-mode web-mode tide json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters coffee-mode company helm-projectile helm counsel swiper exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights super-save smartrep smartparens operate-on-number move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major cyberpunk-theme crux browse-kill-ring beacon anzu ace-window))
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(plantuml-default-exec-mode 'jar)
  '(plantuml-jar-path "/usr/share/plantuml/plantuml.jar")
