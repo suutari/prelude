@@ -1,6 +1,6 @@
 ;;; prelude-modules.el --- A listing of modules to load on startup
 ;;
-;; Copyright © 2011-2025 Bozhidar Batsov
+;; Copyright © 2011-2026 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
@@ -66,7 +66,6 @@
 
 (require 'prelude-c)
 ;; (require 'prelude-clojure)
-;; (require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
 (require 'prelude-css)
 ;; (require 'prelude-dart)
@@ -80,7 +79,7 @@
 ;; (require 'prelude-latex)
 (require 'prelude-lisp) ;; Common setup for Lisp-like languages
 ;; (require 'prelude-literate-programming) ;; Setup for Literate Programming
-(require 'prelude-lsp) ;; Base setup for the Language Server Protocol
+;; (require 'prelude-lsp-mode) ;; lsp-mode and lsp-ui setup (loaded on demand when prelude-lsp-client is 'lsp-mode)
 ;; (require 'prelude-lua)
 ;; (require 'prelude-ocaml)
 (require 'prelude-perl)
@@ -98,7 +97,7 @@
 (require 'prelude-yaml)
 
 ;;; Misc
-(require 'prelude-erc) ;; A popular Emacs IRC client (useful if you're still into Freenode)
+;; (require 'prelude-erc) ;; A popular Emacs IRC client
 
 (provide 'prelude-modules)
 ;;; prelude-modules.el ends here

@@ -1,6 +1,6 @@
 ;;; prelude-helm.el --- Helm setup
 ;;
-;; Copyright © 2011-2025 Bozhidar Batsov
+;; Copyright © 2011-2026 Bozhidar Batsov
 ;;
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/prelude
@@ -55,7 +55,7 @@
 (global-unset-key (kbd "C-x c"))
 
 (define-key helm-command-map (kbd "o")     'helm-occur)
-(define-key helm-command-map (kbd "g")     'helm-do-grep)
+(define-key helm-command-map (kbd "g")     'helm-do-grep-ag)
 (define-key helm-command-map (kbd "C-c w") 'helm-wikipedia-suggest)
 (define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
 

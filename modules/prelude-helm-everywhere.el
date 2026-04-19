@@ -1,6 +1,6 @@
 ;;; prelude-helm-everywhere.el --- Enable Helm everywhere
 ;;
-;; Copyright © 2014-2025 Tu, Do Hoang
+;; Copyright © 2014-2026 Tu, Do Hoang
 ;;
 ;; Author: Tu, Do Hoang (tuhdo1710@gmail.com)
 ;; URL: https://github.com/bbatsov/prelude
@@ -57,9 +57,6 @@
           #'(lambda ()
               (substitute-key-definition 'eshell-list-history 'helm-eshell-history eshell-mode-map)))
 
-(substitute-key-definition 'find-tag 'helm-etags-select global-map)
-
-(helm-descbinds-mode)
 (helm-mode 1)
 
 (when prelude-projectile
