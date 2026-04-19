@@ -114,10 +114,14 @@
   (setq web-mode-css-indent-offset 2)    ; CSS
   (setq web-mode-code-indent-offset 2)   ; JavaScript
   (setq web-mode-attr-indent-offset 2)   ; HTML attributes
-  (setq web-mode-script-padding 2)        ; Padding for <script> tags
-  (setq web-mode-style-padding 2)         ; Padding for <style> tags
-  (setq web-mode-block-padding 2)         ; Padding for blocks (e.g., if, for, while, etc.)
-  (setq web-mode-part-padding 2)          ; Padding for parts (e.g., PHP, ASP, etc.)
+  (setq web-mode-script-padding 2)       ; Padding for <script> tags
+  (setq web-mode-style-padding 2)        ; Padding for <style> tags
+  (setq web-mode-block-padding 2)        ; Padding for blocks (e.g., if, for, while, etc.)
+  (setq web-mode-part-padding 2)         ; Padding for parts (e.g., PHP, ASP, etc.)
+  (setq sgml-basic-offset 2)             ; Indentation for SGML (e.g., HTML)
+  (setq css-indent-offset 2)             ; Indentation for CSS (in svelte-mode etc.)
+  (setq js-indent-level 2)               ; Indentation for JavaScript (in svelte-mode etc.)
+  (setq typescript-indent-level 2)       ; Indentation for TypeScript (in svelte-mode etc.)
   (message "Set web-mode indentation to 2 spaces"))
 
 ;; Set indentation to 4 spaces for web-mode
@@ -127,8 +131,12 @@
   (setq web-mode-css-indent-offset 4)    ; CSS
   (setq web-mode-code-indent-offset 4)   ; JavaScript
   (setq web-mode-attr-indent-offset 4)   ; HTML attributes
-  (setq web-mode-script-padding 4)        ; Padding for <script> tags
-  (setq web-mode-style-padding 4)         ; Padding for <style> tags
-  (setq web-mode-block-padding 4)         ; Padding for blocks (e.g., if, for, while, etc.)
-  (setq web-mode-part-padding 4)          ; Padding for parts (e.g., PHP, ASP, etc.)
+  (setq web-mode-script-padding 4)       ; Padding for <script> tags
+  (setq web-mode-style-padding 4)        ; Padding for <style> tags
+  (setq web-mode-block-padding 4)        ; Padding for blocks (e.g., if, for, while, etc.)
+  (setq web-mode-part-padding 4)         ; Padding for parts (e.g., PHP, ASP, etc.)
+  (setq sgml-basic-offset 4)             ; Indentation for SGML (e.g., HTML)
+  (setq css-indent-offset 4)             ; Indentation for CSS (in svelte-mode etc.)
+  (setq js-indent-level 4)               ; Indentation for JavaScript (in svelte-mode etc.)
+  (setq typescript-indent-level 4)       ; Indentation for TypeScript (in svelte-mode etc.)
   (message "Set web-mode indentation to 4 spaces"))
