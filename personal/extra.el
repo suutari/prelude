@@ -140,3 +140,31 @@
              '("^(\\([0-9]+\\),\\([0-9]+\\)): [^\n]*" nil 1 2))
 (add-to-list 'compilation-error-regexp-alist
              '("^\\([^\n(]+\\)\n(\\([0-9]+\\),\\([0-9]+\\)):" 1 2 3))
+
+;; web-mode helpers
+
+;; Set indentation to 2 spaces for web-mode
+(defun web-mode-indent-2 ()
+  (interactive)
+  (setq web-mode-markup-indent-offset 2) ; HTML
+  (setq web-mode-css-indent-offset 2)    ; CSS
+  (setq web-mode-code-indent-offset 2)   ; JavaScript
+  (setq web-mode-attr-indent-offset 2)   ; HTML attributes
+  (setq web-mode-script-padding 2)        ; Padding for <script> tags
+  (setq web-mode-style-padding 2)         ; Padding for <style> tags
+  (setq web-mode-block-padding 2)         ; Padding for blocks (e.g., if, for, while, etc.)
+  (setq web-mode-part-padding 2)          ; Padding for parts (e.g., PHP, ASP, etc.)
+  (message "Set web-mode indentation to 2 spaces"))
+
+;; Set indentation to 4 spaces for web-mode
+(defun web-mode-indent-4 ()
+  (interactive)
+  (setq web-mode-markup-indent-offset 4) ; HTML
+  (setq web-mode-css-indent-offset 4)    ; CSS
+  (setq web-mode-code-indent-offset 4)   ; JavaScript
+  (setq web-mode-attr-indent-offset 4)   ; HTML attributes
+  (setq web-mode-script-padding 4)        ; Padding for <script> tags
+  (setq web-mode-style-padding 4)         ; Padding for <style> tags
+  (setq web-mode-block-padding 4)         ; Padding for blocks (e.g., if, for, while, etc.)
+  (setq web-mode-part-padding 4)          ; Padding for parts (e.g., PHP, ASP, etc.)
+  (message "Set web-mode indentation to 4 spaces"))
