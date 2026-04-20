@@ -23,11 +23,10 @@
 ;; Revert default C-x o behavior (other-window)
 (global-set-key [remap other-window] 'other-window)
 
-(require 'lsp-mode)
-(define-key lsp-mode-map (kbd "M-.") 'lsp-find-definition)
-(define-key lsp-mode-map (kbd "C-.") 'lsp-ui-peek-find-definitions)
-(define-key lsp-mode-map (kbd "M-o") 'lsp-organize-imports)
-(define-key lsp-mode-map (kbd "C-S-i") 'lsp-format-buffer)
+(require 'eglot)
+(define-key eglot-mode-map (kbd "M-o") 'eglot-code-action-organize-imports)
+(define-key eglot-mode-map (kbd "C-S-i") 'eglot-format-buffer)
+(define-key eglot-mode-map (kbd "C-.") 'eglot-find-typeDefinition)
 
 ;; Use company for completions
 (require 'company)
