@@ -87,7 +87,6 @@
  '(web-mode-part-padding 4)
  '(web-mode-script-padding 4)
  '(wg-session-file "~/.emacs.d/savefile/workgroups")
- '(whitespace-line-column 120)
  '(winner-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
